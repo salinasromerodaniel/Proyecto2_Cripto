@@ -8,5 +8,5 @@ algod_client = algod.AlgodClient(
 )
 #status = algod_client.status()
 #print(status)
-client = ipfshttpclient.connect("/ip4/127.0.0.1/tcp/5001/http")  # Establece la conexión con el nodo local de IPFS
+client = ipfshttpclient.connect("/ip4/127.0.0.1/tcp/5001")  # Establece la conexión con el nodo local de IPFS
 print(client)
