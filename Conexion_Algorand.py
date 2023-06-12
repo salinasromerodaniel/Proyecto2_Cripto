@@ -13,8 +13,8 @@ client = algod.AlgodClient(
 
 
 # Generar una cuenta para el propietario del token
-address = "FIMYONVZTTVTB5OWG2O7HZZWRCLJEUWDVDBJEBOT2Z223LOEOG47QLPIXE"
-private_key = mnemonic.to_private_key("plunge used oval copy access lecture apple black never false gossip ski area true velvet tomato hazard yellow ostrich topple journey kind arch abstract picture")
+address = "Y4NE6BC54JITBDIYIS5CVIYCW2TGC5GQBJXRJGD665R3KGWTP3HPFPJM7Y"
+private_key = mnemonic.to_private_key("inmate better neutral bread tray adult rack army warrior peasant method close frozen hint galaxy balcony swing whale valve clerk until wash trip ability spare")
 
 
 # Configurar los parámetros de la transacción
@@ -27,7 +27,7 @@ asset_unitname = "DOC"
 asset_total = 1  # Como es un NFT, solo se crea una unidad
 asset_decimals = 0  # Nuevamente, como es un NFT, no hay decimales
 # En asset_url puedes poner el hash de IPFS del documento que quieres demostrar propiedad
-asset_url = "https://ipfs.io/ipfs/QmYourHash"
+asset_url = "https://ipfs.io/ipfs/QmWnAsRh5kHf7Be2YEZFva6XLjEnqvmjKQERPFZ5e7qmKd"
 metadata= "Doc Title: My Document"
 asset_metadata = hashlib.sha256(metadata.encode()).digest()
 
