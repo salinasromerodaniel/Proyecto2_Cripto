@@ -27,8 +27,8 @@ asset_unitname = "DOC"
 asset_total = 1  # Como es un NFT, solo se crea una unidad
 asset_decimals = 0  # Nuevamente, como es un NFT, no hay decimales
 # En asset_url puedes poner el hash de IPFS del documento que quieres demostrar propiedad
-asset_url = "https://ipfs.io/ipfs/QmWnAsRh5kHf7Be2YEZFva6XLjEnqvmjKQERPFZ5e7qmKd"
-metadata= "Doc Title: My Document"
+asset_url = "https://ipfs.io/ipfs/Prueba"
+metadata= "Doc Title: Prueba"
 asset_metadata = hashlib.sha256(metadata.encode()).digest()
 
 

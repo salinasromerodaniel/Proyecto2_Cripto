@@ -7,12 +7,33 @@ client = algod.AlgodClient(
     headers={"X-API-Key": "6cvGrbkG7J0CAdxAzHZN6pRqLLodXql5LbCTGYQi"}
 )
 
-# ID del activo (NFT) que fue eliminado
-asset_id = 234965190  # Reemplaza con el ID del NFT que fue destruido
+# Obtén el ID del activo después de haberlo creado
+asset_id = 237614360  # replace with your asset id
 
-# Obtener información actualizada del activo
-asset_info = client.asset_info(asset_id)
-if asset_info is None:
-    print("The NFT has been destroyed.")
-else:
-    print("The NFT still exists.")
+try:
+    # Intenta obtener información del activo
+    asset_info = client.asset_info(asset_id)
+    # Parámetros deseados
+    desired_params = ['name', 'unitname', 'total', 'creator', 'manager', 'reserve', 'freeze', 'clawback']
+
+    # Verificar que los parámetros necesarios existen
+    if 'params' in asset_info:
+        print("Asset ID: {}".format(asset_id))
+        for param in desired_params:
+            if param in asset_info['params']:
+                print(f"Asset {param}: {asset_info['params'][param]}")
+            else:
+                print(f"Asset {param} not found.")
+
+        # Comprueba si el activo ha sido marcado para eliminación
+        if asset_info["params"]["reserve"] == "" and asset_info["params"]["freeze"] == "" and asset_info["params"]["clawback"] == "":
+            print("This asset has been marked for deletion.")
+        else:
+            print("This asset has not been marked for deletion.")
+    else:
+        print("Asset not found or it's no longer available.")
+    
+except Exception as e:
+    print(f"Failed to fetch asset info: {e}")
+
+
