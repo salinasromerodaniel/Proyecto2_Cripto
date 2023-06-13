@@ -8,13 +8,13 @@ client = algod.AlgodClient(
 )
 
 # Obtén el ID del activo después de haberlo creado
-asset_id = 237614360  # replace with your asset id
+asset_id = 237621761  # replace with your asset id
 
 try:
     # Intenta obtener información del activo
     asset_info = client.asset_info(asset_id)
     # Parámetros deseados
-    desired_params = ['name', 'unitname', 'total', 'creator', 'manager', 'reserve', 'freeze', 'clawback']
+    desired_params = ['name', 'unit-name', 'total', 'creator', 'manager', 'reserve', 'freeze', 'clawback']
 
     # Verificar que los parámetros necesarios existen
     if 'params' in asset_info:

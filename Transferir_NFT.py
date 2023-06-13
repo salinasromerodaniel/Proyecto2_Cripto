@@ -21,7 +21,7 @@ receiver_address = "FIMYONVZTTVTB5OWG2O7HZZWRCLJEUWDVDBJEBOT2Z223LOEOG47QLPIXE"
 params = client.suggested_params()
 
 # ID del activo (NFT)
-asset_id = 234965190  # Reemplaza con el ID del NFT que creaste
+asset_id = 237621761  # Reemplaza con el ID del NFT que creaste
 
 # Crea la transacción de transferencia de activos
 txn = AssetTransferTxn(
