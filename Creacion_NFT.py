@@ -14,7 +14,7 @@ client = algod.AlgodClient(
 
 # Generar una cuenta para el propietario del token
 address = "Y4NE6BC54JITBDIYIS5CVIYCW2TGC5GQBJXRJGD665R3KGWTP3HPFPJM7Y"
-private_key = mnemonic.to_private_key("inmate better neutral bread tray adult rack army warrior peasant method close frozen hint galaxy balcony swing whale valve clerk until wash trip ability spare")
+private_key = mnemonic.to_private_key("mnemonic")
 
 
 # Configurar los parámetros de la transacción

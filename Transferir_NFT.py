@@ -11,7 +11,7 @@ client = algod.AlgodClient(
 
 # Cuenta propietaria del NFT
 address = "Y4NE6BC54JITBDIYIS5CVIYCW2TGC5GQBJXRJGD665R3KGWTP3HPFPJM7Y"
-private_key = mnemonic.to_private_key("inmate better neutral bread tray adult rack army warrior peasant method close frozen hint galaxy balcony swing whale valve clerk until wash trip ability spare")
+private_key = mnemonic.to_private_key("mnemonic")
 
 # Cuenta receptora del NFT
 receiver_address = "FIMYONVZTTVTB5OWG2O7HZZWRCLJEUWDVDBJEBOT2Z223LOEOG47QLPIXE"

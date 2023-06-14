@@ -31,7 +31,7 @@ txn = AssetTransferTxn(
 )
 
 # Necesitas la clave privada de la cuenta que está optando por el activo para firmar la transacción
-optin_private_key = mnemonic.to_private_key("plunge used oval copy access lecture apple black never false gossip ski area true velvet tomato hazard yellow ostrich topple journey kind arch abstract picture")
+optin_private_key = mnemonic.to_private_key("mnemonic")
 stxn = txn.sign(optin_private_key)
 
 # Enviar la transacción
