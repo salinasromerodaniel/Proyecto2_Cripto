@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}" />
+</head>
+
+
+<body>
+    <center>
+        <p style="font-size: 100px">
+            <b>
+                NFTareas
+            </b>   
+        </p>
+        </center>
+    <center>
+    <h1 class="text-center">
+        Proporciona los datos de tu cuenta:
+    </h1>
+    <form action = "{{ url_for('menu') }}" method="POST">
+        <input type = "text" name = "api" placeholder="API-KEY de PureStake"><br>
+        <input type = "text" name = "direccions" placeholder="Dirección de tu cuenta en Algorand Testnet"><br>
+        <input type = "text" name = "mnemonic" placeholder="MNEMONIC"><br>
+        <br>
+        <input type = "submit" value = "Subir">
+    </form>
+    </center>
+
+
+    <center>
+        <p style="font-size: 20px">
+            <div class="example">
+                Proyecto para la materia de Criptografía
+                <br>
+                <b>
+                    <ul>
+                        Equipo:
+                        <li>Manzanares Peña Jorge Luis</li>
+                        <li>Reyes Avila David</li>
+                        <li>Salazár Domínguez Jesús Eduardo</li>
+                        <li>Salinas Romero Daniel</li>
+                      </ul>
+                      
+                      
+                </b> 
+            </div>
+            
+   
+        </p>
+        </center>
+</body>
+
+</html>

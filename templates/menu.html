@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}" />
+</head>
+<body>
+    <center>
+    <h1 class="text-center">
+        Transacciones con la Blockchain de Algorand Testnet
+    </h1>
+    <form action = "{{ url_for('predict') }}" method="POST">
+        <input type = "submit" value = "Creación de NFT">
+    </form>
+    <br>
+    <form action = "{{ url_for('optar') }}" method="POST">
+        <input type = "submit" value = "Aceptar recibir NFT">
+    </form>
+    <br>
+    <form action = "{{ url_for('transferir') }}" method="POST">
+        <input type = "submit" value = "Transferencia de NFT">
+    </form>
+    <br>
+    <form action = "{{ url_for('consultar') }}" method="POST">
+        <input type = "submit" value = "Consulta de NFT">
+    </form>
+    <br>
+    <form action = "{{ url_for('eliminar') }}" method="POST">
+        <input type = "submit" value = "Eliminar NFT">
+    </form>
+
+    <p style="font-size: 30px">
+        <a href="/">Página Principal</a>
+    </p>
+    </center>
+</body>
+</html>

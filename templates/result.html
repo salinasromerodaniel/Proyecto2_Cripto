@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de NFT de Apunte</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}" />
+</head>
+<body>
+
+    <center>
+        <h1 class="text-center">
+            Proporcioname el link del documento de IPFS:
+        </h1>
+        <form action = "{{ url_for('crear') }}" method="POST">
+            <input type = "text" name = "linkdoc" placeholder="Link de documento IPFS"><br>
+            <input type = "text" name = "hash" placeholder="Hash del documento (CID)"><br>
+            <br>
+            <input type = "submit" value = "Subir">
+        </form>
+        </center>
+</body>
+</html>

@@ -14,7 +14,7 @@ owner_address = "Y4NE6BC54JITBDIYIS5CVIYCW2TGC5GQBJXRJGD665R3KGWTP3HPFPJM7Y"
 owner_private_key = mnemonic.to_private_key("inmate better neutral bread tray adult rack army warrior peasant method close frozen hint galaxy balcony swing whale valve clerk until wash trip ability spare")
 
 # Obtén el ID del activo después de haberlo creado
-asset_id = 237614360
+asset_id = 237714955
 
 # Configurar los parámetros de la transacción
 params = client.suggested_params()

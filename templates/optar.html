@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aceptar recibir un NFT de Apunte</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='estilos.css') }}" />
+</head>
+<body>
+
+    <center>
+        <h1 class="text-center">
+            Dame el ID del NFT que deseas aceptar:
+        </h1>
+        <form action = "{{ url_for('resoptar') }}" method="POST">
+            <input type = "text" name = "id" placeholder="ID del asset no fungible a recibir"><br>
+            <br>
+            <input type = "submit" value = "Subir">
+        </form>
+        <a href="/menu">Regresar al Menú de transacciones</a>
+        </center>
+</body>
+</html>
