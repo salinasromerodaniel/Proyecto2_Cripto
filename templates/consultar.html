@@ -16,7 +16,7 @@
         <form action = "{{ url_for('consultar') }}" method="POST">
             <input type = "text" name = "id" placeholder="ID del asset no fungible"><br>
             <br>
-            <input type = "submit" value = "Subir">
+            <input type = "submit" value = "Subir" style="width: 150px; height: 40px;">
         </form>
 
         {% if salida %}
@@ -24,7 +24,7 @@
                 <p>{{elemento}}</p>
             {% endfor %}
         {% endif %}
-
+        <br>
         <a href="/menu">Regresar al Menú de transacciones</a>
         </center>
 </body>

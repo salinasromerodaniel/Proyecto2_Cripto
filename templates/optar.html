@@ -14,10 +14,11 @@
             Dame el ID del NFT que deseas aceptar:
         </h1>
         <form action = "{{ url_for('resoptar') }}" method="POST">
-            <input type = "text" name = "id" placeholder="ID del asset no fungible a recibir"><br>
+            <input type = "text" name = "id" placeholder="ID del asset no fungible a recibir" style="width: 300px;"><br>
             <br>
-            <input type = "submit" value = "Subir">
+            <input type = "submit" value = "Subir" style="width: 150px; height: 40px;">
         </form>
+        <br>
         <a href="/menu">Regresar al Menú de transacciones</a>
         </center>
 </body>

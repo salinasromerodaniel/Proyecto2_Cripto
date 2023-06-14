@@ -14,12 +14,12 @@
             Proporcioname el link del documento de IPFS:
         </h1>
         <form action = "{{ url_for('crear') }}" method="POST">
-            <input type = "text" name = "linkdoc" placeholder="Link de documento IPFS"><br>
-            <input type = "text" name = "hash" placeholder="Hash del documento (CID)"><br>
+            <input type = "text" name = "linkdoc" placeholder="Link de documento IPFS" style="width: 300px;"><br>
+            <input type = "text" name = "hash" placeholder="Hash del documento (CID)" style="width: 300px;"><br>
             <br>
-            <input type = "submit" value = "Subir">
+            <input type = "submit" value = "Subir" style="width: 150px; height: 40px;">
         </form>
-
+        <br>
         <a href="/menu">Regresar al Menú de transacciones</a>
         </center>
 </body>

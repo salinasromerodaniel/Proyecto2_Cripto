@@ -9,27 +9,33 @@
 </head>
 <body>
     <center>
+        <div class="example">
     <h1 class="text-center">
-        Transacciones con la Blockchain de Algorand Testnet
+        <p style="font-size: 80px">
+            <b>
+                Transacciones con la Blockchain de Algorand (Testnet)
+            </b>   
+        </p>   
     </h1>
+    </div>
     <form action = "{{ url_for('predict') }}" method="POST">
-        <input type = "submit" value = "Creación de NFT">
+        <input type = "submit" value = "Creación de NFT" style="width: 150px; height: 40px;">
     </form>
     <br>
     <form action = "{{ url_for('optar') }}" method="POST">
-        <input type = "submit" value = "Aceptar recibir NFT">
+        <input type = "submit" value = "Aceptar recibir NFT" style="width: 150px; height: 40px;">
     </form>
     <br>
     <form action = "{{ url_for('transferir') }}" method="POST">
-        <input type = "submit" value = "Transferencia de NFT">
+        <input type = "submit" value = "Transferencia de NFT" style="width: 150px; height: 40px;">
     </form>
     <br>
     <form action = "{{ url_for('consultar') }}" method="POST">
-        <input type = "submit" value = "Consulta de NFT">
+        <input type = "submit" value = "Consulta de NFT" style="width: 150px; height: 40px;">
     </form>
     <br>
     <form action = "{{ url_for('eliminar') }}" method="POST">
-        <input type = "submit" value = "Eliminar NFT">
+        <input type = "submit" value = "Eliminar NFT" style="width: 150px; height: 40px;">
     </form>
 
     <p style="font-size: 30px">

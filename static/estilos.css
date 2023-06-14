@@ -1,5 +1,18 @@
 body{
-    background-image: url("fondo.jpg");   
-
+    background-image: url("fondo.jpg");
+    color: #ffffff; 
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Borde negro alrededor del texto */
 }
-.example { background-color: #fff;}
+
+.example { background-color: #ad5a1aa2;}
+
+.example input[type="submit"] {
+    width: 300px;
+    height: 300px;
+    /* Agrega otros estilos adicionales si lo deseas */
+}
+.registered {
+    font-size: 0.6em; /* Tamaño de fuente más pequeño */
+    vertical-align: text-top; /* Posición elevada */
+  }
+  

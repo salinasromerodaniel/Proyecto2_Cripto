@@ -11,20 +11,20 @@
 
     <center>
         <h1 class="text-center">
-            Dame el ID del NFT y la cuenta de ALgorand a la cuál Transferir:
+            Dame el ID del NFT y la cuenta de Algorand a la cuál Transferir:
         </h1>
         <form action = "{{ url_for('transferir') }}" method="POST">
-            <input type = "text" name = "id" placeholder="ID del asset no fungible"><br>
+            <input type = "text" name = "id" placeholder="ID del asset no fungible" style="width: 300px;"><br>
             <br>
-            <input type = "text" name = "direccionr" placeholder="Dirección de la cuenta a Transferir"><br>
+            <input type = "text" name = "direccionr" placeholder="Dirección de la cuenta a Transferir" style="width: 300px;"><br>
             <br>
-            <input type = "submit" value = "Subir">
+            <input type = "submit" value = "Subir" style="width: 150px; height: 40px;">
         </form>
 
         {% if mensaje %}
             <p>{{mensaje}}</p>
         {% endif %}
-
+        <br>
         <a href="/menu">Regresar al Menú de transacciones</a>
         </center>
 </body>

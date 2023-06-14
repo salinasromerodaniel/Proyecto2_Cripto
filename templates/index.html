@@ -11,22 +11,24 @@
 
 <body>
     <center>
+        <div class="example">
         <p style="font-size: 100px">
             <b>
-                NFTareas
+                NFTareas<span class="registered">®</span>
             </b>   
         </p>
+    </div>
         </center>
     <center>
     <h1 class="text-center">
         Proporciona los datos de tu cuenta:
     </h1>
     <form action = "{{ url_for('menu') }}" method="POST">
-        <input type = "text" name = "api" placeholder="API-KEY de PureStake"><br>
-        <input type = "text" name = "direccions" placeholder="Dirección de tu cuenta en Algorand Testnet"><br>
-        <input type = "text" name = "mnemonic" placeholder="MNEMONIC"><br>
+        <input type = "text" name = "api" placeholder="API-KEY de PureStake" style="width: 300px;"><br>
+        <input type = "text" name = "direccions" placeholder="Dirección de tu cuenta en Algorand Testnet" style="width: 300px;"><br>
+        <input type = "text" name = "mnemonic" placeholder="MNEMONIC" style="width: 300px;"><br>
         <br>
-        <input type = "submit" value = "Subir">
+        <input type = "submit" value = "Subir" style="width: 150px; height: 40px;">
     </form>
     </center>
 
@@ -44,8 +46,7 @@
                         <li>Salazár Domínguez Jesús Eduardo</li>
                         <li>Salinas Romero Daniel</li>
                       </ul>
-                      
-                      
+                      <br>
                 </b> 
             </div>
             
