@@ -3,6 +3,7 @@ from flask import g
 from algosdk import account, algod, mnemonic
 from algosdk.future.transaction import AssetConfigTxn, AssetTransferTxn
 from algosdk.v2client import algod
+from algosdk.error import AlgodHTTPError
 import hashlib
 
 
@@ -106,37 +107,47 @@ def eliminar():
 
 @app.route('/reseliminar', methods=["GET", "POST"])
 def reseliminar():
-    Id.id = request.form['id']
-    # Configuración del cliente de Algod
-    client = algod.AlgodClient(
-        algod_token="",
-        algod_address="https://testnet-algorand.api.purestake.io/ps2",
-        headers={"X-API-Key": Api_key.api}
-    )
-    # Cuenta propietaria del NFT
-    owner_address = Direccion_s.direccion
-    owner_private_key = mnemonic.to_private_key(Mnemonic.mnemonic)
-    # Obtén el ID del activo después de haberlo creado
-    asset_id = Id.id
-    # Configurar los parámetros de la transacción
-    params = client.suggested_params()
-    # Crear la transacción
-    txn = AssetConfigTxn(
-        sender=owner_address,
-        sp=params,
-        index=asset_id,
-        manager=None,
-        reserve=None,
-        freeze=None,
-        clawback=None,
-        strict_empty_address_check=False,
-    )
-    # Firmar la transacción
-    stxn = txn.sign(owner_private_key)
-    # Enviar la transacción
-    txid = client.send_transaction(stxn)
-    mensaje = "Successfully sent transaction with txID: {}".format(txid)
-    return render_template('reseliminar.html', mensaje = mensaje)
+    try:
+        Id.id = request.form['id']
+        # Configuración del cliente de Algod
+        client = algod.AlgodClient(
+            algod_token="",
+            algod_address="https://testnet-algorand.api.purestake.io/ps2",
+            headers={"X-API-Key": Api_key.api}
+        )
+        # Cuenta propietaria del NFT
+        owner_address = Direccion_s.direccion
+        owner_private_key = mnemonic.to_private_key(Mnemonic.mnemonic)
+        # Obtén el ID del activo después de haberlo creado
+        asset_id = Id.id
+        # Configurar los parámetros de la transacción
+        params = client.suggested_params()
+        # Crear la transacción
+        txn = AssetConfigTxn(
+            sender=owner_address,
+            sp=params,
+            index=asset_id,
+            manager=None,
+            reserve=None,
+            freeze=None,
+            clawback=None,
+            strict_empty_address_check=False,
+        )
+        # Firmar la transacción
+        stxn = txn.sign(owner_private_key)
+        # Enviar la transacción
+        txid = client.send_transaction(stxn)
+        mensaje = "Successfully sent transaction with txID: {}".format(txid)
+        return render_template('reseliminar.html', mensaje = mensaje)
+    except AlgodHTTPError as e:
+        error_message = str(e)
+        # Verificar el mensaje de error para determinar si el NFT no es de tu propiedad
+        if "cannot destroy asset: creator is holding only" in error_message:
+            mensaje = "El NFT no es de tu propiedad."
+        else:
+            mensaje = "Error desconocido al intentar borrar el NFT."
+
+        return render_template('reseliminar.html', mensaje=mensaje)
 
 @app.route('/consultar', methods=["GET", "POST"])
 def consultar():

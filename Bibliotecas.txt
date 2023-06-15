@@ -1,3 +1,0 @@
-pip install pyteal
-pip install ipfshttpclient
-pip install py-algorand-sdk
